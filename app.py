@@ -1,11 +1,15 @@
 from flask import Flask, request, render_template, redirect, url_for, jsonify
 from pymongo import MongoClient
+import requests
 from bson import ObjectId
+
+from os.path import join, dirname
+from dotenv import load_dotenv
+import os
 
 from datetime import datetime
 
-import requests
-
+app = Flask(__name__)
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
@@ -14,8 +18,6 @@ DB_NAME =  os.environ.get("DB_NAME")
 
 client = MongoClient(MONGODB_URI)
 db = client[DB_NAME]
-
-app = Flask(__name__)
 
 
 @app.route('/')
