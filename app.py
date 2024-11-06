@@ -104,7 +104,7 @@ def delete_word():
 
     return jsonify({
         'result' : 'success', 
-        'msg' : f'the word, {word}, success deleted!!'
+        'msg' : f'The word, {word}, success deleted!!'
     })
 
 @app.route('/api/get_exs', methods=['GET'])
