@@ -83,6 +83,11 @@ td > a:hover {
   text-decoration: underline;
 }
 
+li > a{
+  color: #e8344e;
+  text-decoration: none;
+}
+
 thead:first-child tr:first-child th:first-child {
   border-radius: 10px 0 0 0;
 }
